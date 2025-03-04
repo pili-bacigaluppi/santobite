@@ -3,18 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Santo Bite - Hamburguesería</title>
 </head>
 <body>
     <header>
-
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+            <article class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./assets/img/logo-santo-bite.png" alt="logo de santo bite" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <article class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sectHamburguesas">Hamburguesas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sectPromos">Promos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sectionSB">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/empleados.html">Empleados</a>
+                        </li>
+                    </ul>
+                </article>
+            </article>
+        </nav>
     </header>
     <main>
-
+        <section class="section1" id="section1">
+            <img src="./assets/img/IMG_6204.PNG" alt="fondo local de hamburguesas" class="fondoSection1">
+            <article class="textoPresentación">
+                <h1>Bienvenidos a Santo Bite</h1>
+                <div>
+                    <p>Este código esta destinado a ser un e-commerce en línea para un negocio de hamburguesas, donde los usuarios puedan explorar un catálogo de productos, añadirlos a su carrito de compras y finalizar su compra con distintos métodos de pago. Además, valida la disponibilidad del stock y, en caso de que se haya seleccionado una cantidad mayor a la disponible, el sistema informa al usuario de la falta de stock.</p>
+                    <p>También, el sistema permite gestionar el inventario de hamburguesas, ya que los empleados pueden agregar nuevas hamburguesas al menú o eliminar las existentes. Los métodos de pago disponibles son Visa, Macro y Mercado Pago. Al finalizar el proceso de compra, el usuario ve un resumen, confirmación del pago y un mensaje de agradecimiento.</p>
+                </div>
+            </article>
+        </section>
+        <section class="section2" id="sectHamburguesas">
+            <h2>Elige la que más te gusta:</h2>
+            <article class="contenedor-hamburguesas">
+                <article class="card-hamburguesa">
+                    <img src="./assets/img/cheddar-santo.png" alt="imagen de hamburguesa con cheddar" class="hamburguesa">
+                    <div class="texto-card">
+                        <h3>Cheddar Santo</h3>
+                        <p>$9500</p>
+                    </div>
+                </article>
+                <article class="card-hamburguesa">
+                    <img src="./assets/img/angelito.png" alt="imagen de hamburguesa para niños" class="hamburguesa">
+                    <div class="texto-card">
+                        <h3>Angelito</h3>
+                        <p>$7500</p>
+                    </div>
+                </article>
+                <article class="card-hamburguesa">
+                    <img src="./assets/img/santo-tocino.png" alt="imagen de hamburguesa con mucho bacon" class="hamburguesa">
+                    <div class="texto-card">
+                        <h3>Santo Tocino</h3>
+                        <p>$9800</p>
+                    </div>
+                </article>
+                <article class="card-hamburguesa">
+                    <img src="./assets/img/doble-gloria.png" alt="imagen de hamburguesa grande" class="hamburguesa">
+                    <div class="texto-card">
+                        <h3>Doble Gloria</h3>
+                        <p>$11000</p>
+                    </div>
+                </article>
+            </article>
+        </section>
+        <section class="section3" id="sectPromos">
+            <img class="reloj-promos" src="./assets/img/reloj-promos.png" alt="reloj de cocina vintage">
+            <article class="textoSB">
+                <h3 class="h3SB">APROVECHA LA SUPER PROMO POR LA PRIMERA SEMANA DE MARZO</h3>
+                <div>
+                    <p><strong>¡Atención a todos los fanáticos de las hamburguesas!</strong> Esta es la oportunidad que estabas esperando: vení a nuestro local, comprá tres hamburguesas y te llevas una <strong>totalmente gratis</strong>, solo por pagar en efectivo.</p> 
+                    <p>No hay mejor manera de disfrutar de una buena comida con amigos o en familia, aprovechando esta promo increíble que te ofrece más sabor por menos. No te lo podés perder, es el momento perfecto para darte un gusto y disfrutar de nuestras deliciosas hamburguesas. ¡Te esperamos para que aproveches esta promo única!</p>
+                </div>
+            </article>
+        </section>
+        <section class="section4" id="sectionSB">
+            <article class="fondoSB">
+                <h2 class="sobreNH2">Sobre Nosotros</h2>
+                <p class="sobreNP">En Santo Bite, nos apasiona ofrecer una experiencia única con cada bocado. Desde nuestro inicio en 2018, nos hemos dedicado a crear hamburguesas de calidad, utilizando ingredientes frescos y seleccionados con el mayor cuidado. Cada receta ha sido pensada para sorprender a nuestros clientes, fusionando sabores tradicionales con toques innovadores que hacen de cada hamburguesa una verdadera delicia. En Santo Bite, creemos que la comida no es solo un platillo, sino una experiencia que une a las personas. ¡Te invitamos a probar nuestras creaciones y ser parte de esta deliciosa historia!</p>
+            </article>
+        </section>
     </main>
-    <footer>
-
-    </footer>
-    <script src="main.js"></script>
+    <article class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="./assets/img/logo-santo-bite.png" alt="logo de santo bite">
+            </a>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#section1" class="nav-link px-2 text-body-secondary">Inicio</a></li>
+                <li class="nav-item"><a href="#sectHamburguesas" class="nav-link px-2 text-body-secondary">Hamburguesas</a></li>
+                <li class="nav-item"><a href="#sectPromos" class="nav-link px-2 text-body-secondary">Promos</a></li>
+                <li class="nav-item"><a href="#sectionSB" class="nav-link px-2 text-body-secondary">Sobre Nosotros</a></li>
+                <li class="nav-item"><a href="./pages/empleados.html" class="nav-link px-2 text-body-secondary">Empleados</a></li>
+            </ul>
+        </footer>
+    </article>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-</html>
+</html> 

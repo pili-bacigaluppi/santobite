@@ -21,9 +21,6 @@ function carrito(nombreHamburguesa, cantHamburguesas){
                 }
                 let nuevaCantidad = prodSeleccionado.disponibles - cantHamburguesas;
                 prodSeleccionado.disponibles = nuevaCantidad;
-                
-                //LO DE ARRIBA NO VA A NADAAAAAAAAAAAAAA
-                
                 precioTotal += prodSeleccionado.precio * cantHamburguesas;
                 let agregarHamburguesas = confirm(`¿Quieres agregar otras hamburguesas a tu carrito?`);
                 if (agregarHamburguesas == true ){
@@ -80,7 +77,8 @@ function agregarHamburguesaAlArray(){
     };
 }
 function eliminarHamburguesaDelArray(preguntaEliminar){
-    const posDeEliminar = hamburguesas.findIndex(hamburguesas => hamburguesas.nombre === preguntaEliminar); // Búsqueda de la hamburguesa a eliminar.
+    const hamburguesaEliminadaFinal = preguntaEliminar.trim().toUpperCase();
+    const posDeEliminar = hamburguesas.findIndex(hamburguesas => hamburguesas.nombre.toUpperCase() === hamburguesaEliminadaFinal); // Búsqueda de la hamburguesa a eliminar.
     console.log(posDeEliminar);
     if(posDeEliminar !== -1){
         let elementoEliminado = hamburguesas.splice(posDeEliminar, 1);
@@ -92,32 +90,36 @@ function eliminarHamburguesaDelArray(preguntaEliminar){
 
 //Function de Formas de Pago: 
 function pagos(){
-    let formaDePago = parseInt(prompt(`Con qué forma de pago desea abonar: \n1(Visa) \n2(Macro) \n3(Mercado Pago)`));
-    if (formaDePago === 1){
-        alert(`No tiene recargos.\nEl total de su compra es de $${precioTotal}`);
-        alert(`Gracias por elegir nuestro negocio, esperamos verte por aqui de nuevo!`);
+    if (precioTotal === 0){
+        alert(`No hay nada que tengas que pagar.`);
         codigoNormal = false;
-    } else if(formaDePago === 2){
-        let precioMacro = (precioTotal * 0.20) + precioTotal;
-        alert(`Macro tiene un 20% de recargo.\nSuma de su compra antes de recargos: $${precioTotal}.\nEl total de su compra es de $${precioMacro}`);
-        alert(`Gracias por elegir nuestro negocio, esperamos verte por aqui de nuevo!`);
-        codigoNormal = false;
-    } else if(formaDePago === 3){
-        let precioMP = (precioTotal * 0.10) + precioTotal;
-        alert(`Mercado Pago tiene un 10% de recargo.\nSuma de su compra antes de recargos: $${precioTotal}.\nEl total de su compra es de $${precioMP}`);
-        alert(`Gracias por elegir nuestro negocio, esperamos verte por aqui de nuevo!`);
-        codigoNormal = false;
-    } else if(!formaDePago){
-        alert("Has decidido volver atrás. No se ha realizado el pago.");
-        codigoNormal = true
     } else{
-        alert(`Método de pago no válido, por favor ingrese otro.`);
-        pagos();
+        let formaDePago = parseInt(prompt(`Con qué forma de pago desea abonar: \n1(Visa) \n2(Macro) \n3(Mercado Pago)`));
+        if (formaDePago === 1){
+            alert(`No tiene recargos.\nEl total de su compra es de $${precioTotal}`);
+            alert(`Gracias por elegir nuestro negocio, esperamos verte por aqui de nuevo!`);
+            codigoNormal = false;
+        } else if(formaDePago === 2){
+            let precioMacro = (precioTotal * 0.20) + precioTotal;
+            alert(`Macro tiene un 20% de recargo.\nSuma de su compra antes de recargos: $${precioTotal}.\nEl total de su compra es de $${precioMacro}`);
+            alert(`Gracias por elegir nuestro negocio, esperamos verte por aqui de nuevo!`);
+            codigoNormal = false;
+        } else if(formaDePago === 3){
+            let precioMP = (precioTotal * 0.10) + precioTotal;
+            alert(`Mercado Pago tiene un 10% de recargo.\nSuma de su compra antes de recargos: $${precioTotal}.\nEl total de su compra es de $${precioMP}`);
+            alert(`Gracias por elegir nuestro negocio, esperamos verte por aqui de nuevo!`);
+            codigoNormal = false;
+        } else if(!formaDePago){
+            alert("Has decidido volver atrás. No se ha realizado el pago.");
+            codigoNormal = true
+        } else{
+            alert(`Método de pago no válido, por favor ingrese otro.`);
+            pagos();
+        }
     }
 }
 
 //Código normal
-alert(`Como todavía no tengo HTML, los nombres de las hamburguesas son: Santo Tocino, Angelito, Cheddar Santo y Doble Gloria. Acuerdatelos antes de pedir y escribelos bien, sin diferencias.`);
 
 while (codigoNormal){
     let preguntaInicial = parseInt(prompt(`Bienvenido a Santo Bite, que deseas hacer hoy: \n1 (Comprar una hamburguesa) \n2 (Ir al carrito) \n3 (Agregar una hamburguesa al menú), \n4(Eliminar una hamburguesa del menú) \n5 (Finalizar la compra)`));

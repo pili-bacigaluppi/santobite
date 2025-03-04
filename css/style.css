@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+/* font-family: "Cabin", sans-serif; */
+/* Usar con font weight de 400 a 700 */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Libre Franklin", sans-serif; */
+.navbar{
+    padding: 0px;
+}
+.container-fluid{
+    padding: 0px;
+}
+.navbar-nav{
+    gap: 40px;
+    margin-left: 40px;
+}
+.nav-link{
+    font-size: 1.1rem;
+}
+.logo{
+    height: 70px;
+    width: auto;
+    object-fit: contain ;
+}
+.fondoSection1{
+    width: 650px;
+    height: 600px;
+    object-fit: cover;
+}
+body{
+    color: #E5D0AC;
+    font-family: "Cabin", sans-serif;
+}
+h1{
+    color: #C14600;
+    font-weight: 700;
+}
+.section1{
+    display: flex;
+    align-items: center;
+}
+p{
+    color: black;
+}
+.textoPresentación{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    width: 600px;
+    margin: 30px auto 0px auto;
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.card-hamburguesa{
+    width: 300px;
+    height: 300px;
+    background-color: #FEF9E1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 5px 5px 5px #E5D0AC;
+}
+.card-hamburguesa:hover{
+    width: 310px;
+    height: 310px;
+}
+h2, h3{
+    color: #C14600;
+}
+h2{
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 600;
+}
+.contenedor-hamburguesas{
+    display: flex;
+    gap: 30px;
+}
+.hamburguesa{
+    width: 200px;
+    height: 200px;
+    align-self: center;
+}
+.texto-card{
+    margin-left: 25px;
+}
+.fondoSB{
+    width: 800px;
+    height: 400px;
+    background-color: #fef9e1c5;
+    border: 3px solid #E5D0AC;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.sobreNP{
+    width: 700px;
+    align-self: center;
+    text-align: justify;
+}
+.sobreNH2{
+    margin-left: 48px;
+}
+.section4{
+    background-image: url(../assets/img/fondo-sb.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+.section3{
+    display: flex;
+    padding: 20px;
+    gap: 60px;
+}
+.h3SB{
+    text-align: center;
+}
+.textoSB{
+    width: 650px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.reloj-promos{
+    width: 500px;
+    height: 500px;
+}
+.sectionEmp1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pedidosH1{
+    margin: 30px;
+    text-decoration: underline;
+}
+.pedidos{
+    width: 1200px;
+    min-height: 500px;
+    border: 2px solid #e5d0aca8;
+}
+.pedidosH2{
+    font-size: 1.5rem;
+    align-self: flex-start;
+    margin-left: 80px;
+}
+.pedidos-hamburguesa{
+    width: 100px;
+    height: 100px;
+}
+.pedidos-card{
+    display: flex;
+    gap: 60px;
+    height: 120px;
+    width: 1100px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 60px;
+    border-bottom: 2px solid #e5d0aca8;
+}
